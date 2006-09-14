@@ -2,20 +2,22 @@
 #include <stdio.h>
 #include <errno.h>
 #include <stdarg.h>
+#include <string.h>
 
 /* cheap version of Imager's logging */
 char const *last_file; int last_line;
 
 static void do_log(int level, char const *fmt, ...);
+
+#define mm_log(x) ((last_file = __FILE__), (last_line = __LINE__), do_log x )
+
+#ifdef MEM_DEBUG
+
 static
 void
 bndcheck(int idx);
 void
 bndcheck_all(void);
-
-#define mm_log(x) ((last_file = __FILE__), (last_line = __LINE__), do_log x )
-
-#ifdef MEM_DEBUG
 
 #define MAXMAL 102400
 #define MAXDESC 65

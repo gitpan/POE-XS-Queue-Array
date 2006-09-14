@@ -7,8 +7,8 @@
 
 /*#define DEBUG(x) x*/
 #define DEBUG(x)
-#define DEBUG_ERR(x) x
-/*#define DEBUG_ERR(x)*/
+/*#define DEBUG_ERR(x) x*/
+#define DEBUG_ERR(x)
 
 /*#define KEEP_STATS 1*/
 
@@ -252,7 +252,7 @@ pq_move_items(poe_queue *pq, int target, int src, int count) {
       ++die;
     }
     if (target + count > pq->alloc) {
-      fprintf(stderr, "target %d + count %d > alloc\n", target, count, pq->alloc);
+      fprintf(stderr, "target %d + count %d > alloc %d\n", target, count, pq->alloc);
       ++die;
     }
     if (die) *(char *)0 = '\0';
