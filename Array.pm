@@ -3,12 +3,9 @@ use strict;
 use vars qw(@ISA $VERSION);
 use POE::Queue;
 
-@ISA = qw(POE::Queue);
-
 BEGIN {
-  require Exporter;
-  @ISA = qw(Exporter);
-  $VERSION = '0.003';
+  @ISA = qw(POE::Queue);
+  $VERSION = '0.004';
   eval {
     # try XSLoader first, DynaLoader has annoying baggage
     require XSLoader;
@@ -88,10 +85,6 @@ Some possible improvements include:
 
 =item *
 
-use binary searches for large queues
-
-=item *
-
 use a B-Tree for the queue (not a binary tree, a B-Tree), though this
 would require a module rename.
 
@@ -107,6 +100,10 @@ context, pq_remove_items and pq_peek_items could avoid building all
 those array refs.
 
 =back
+
+=head1 LICENSE
+
+POE::XS::Queue::Array is licensed under the same terms as Perl itself.
 
 =head1 AUTHOR
 
