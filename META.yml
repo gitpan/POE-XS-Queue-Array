@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                POE-XS-Queue-Array
-version:             0.004
+version:             0.005
 abstract:            XS version of POE::Queue::Array
 license:             perl
 author:              
