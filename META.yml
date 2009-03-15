@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               POE-XS-Queue-Array
-version:            0.005_01
+version:            0.005_02
 abstract:           XS version of POE::Queue::Array
 author:
     - Tony Cook <tonyc@cpan.org>

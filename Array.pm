@@ -5,7 +5,7 @@ use POE::Queue;
 
 BEGIN {
   @ISA = qw(POE::Queue);
-  $VERSION = '0.005_01';
+  $VERSION = '0.005_02';
   eval {
     # try XSLoader first, DynaLoader has annoying baggage
     require XSLoader;
@@ -30,6 +30,8 @@ sub import {
   *{ $package . '::ITEM_ID'       } = \&ITEM_ID;
   *{ $package . '::ITEM_PAYLOAD'  } = \&ITEM_PAYLOAD;
 }
+
+sub CLONE_SKIP { 1 }
 
 # everything else is XS
 1;
