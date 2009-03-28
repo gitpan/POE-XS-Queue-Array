@@ -1,20 +1,14 @@
 --- #YAML:1.0
-name:               POE-XS-Queue-Array
-version:            0.005_02
-abstract:           XS version of POE::Queue::Array
-author:
+name:                POE-XS-Queue-Array
+version:             0.006
+abstract:            XS version of POE::Queue::Array
+license:             perl
+author:              
     - Tony Cook <tonyc@cpan.org>
-license:            perl
-distribution_type:  module
-configure_requires:
-    ExtUtils::MakeMaker:  0
-requires:
-    POE:  0.29
-no_index:
-    directory:
-        - t
-        - inc
-generated_by:       ExtUtils::MakeMaker version 6.48
+generated_by:        ExtUtils::MakeMaker version 6.42
+distribution_type:   module
+requires:     
+    POE:                           0.29
 meta-spec:
-    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
-    version:  1.4
+    url:     http://module-build.sourceforge.net/META-spec-v1.3.html
+    version: 1.3
